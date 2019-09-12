@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PhotoCard from "./PhotoCard";
 import axios from "axios";
+import { Container, Row } from "reactstrap";
 
 export default function Apod() {
 	const [title, setTitle] = useState("");
@@ -24,13 +25,15 @@ export default function Apod() {
 	}, []);
 
 	return (
-		<div className="pics">
-			<PhotoCard
-				getTitle={title}
-				getUrl={url}
-				getDate={date}
-				getExplanation={explanation}
-			/>
-		</div>
+		<Container>
+			<Row>
+				<PhotoCard
+					getTitle={title}
+					getUrl={url}
+					getDate={date}
+					getExplanation={explanation}
+				/>
+			</Row>
+		</Container>
 	);
 }
