@@ -2,11 +2,13 @@ import React from "react";
 
 const PhotoCard = props => {
 	return (
-		<div className="star-card">
-			<h2>Title: {props.title}</h2>
-			<img className="star-img" alt="outer space" src={props.url} />
-			<p>{props.date}</p>
-			<p>{props.explanation}</p>
+		<div className="App-header">
+			<div className="App-link">
+				<h2>Title: {props.getTitle}</h2>
+			</div>
+			<img className="App-logo" alt="outer space" src={props.getUrl} />
+			<p>{props.getDate}</p>
+			<p>{props.getExplanation}</p>
 		</div>
 	);
 };
